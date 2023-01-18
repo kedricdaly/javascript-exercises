@@ -1,4 +1,10 @@
-const sumAll = function() {
+const sumAll = function(lBound,uBound) {
+
+    fSum = 0;
+    for (let i = lBound; i <= uBound; i++){
+        fSum += i;
+    }
+    return fSum
 
 };
 
