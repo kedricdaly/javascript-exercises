@@ -1,10 +1,10 @@
 const repeatString = function(inputStr, nRepeats) {
     
     if (nRepeats < 0) {
-        return 'ERROR'
+        return 'ERROR';
     }
     
-    outStr = '';
+    let outStr = '';
     for (let i = 0; i<nRepeats ;i++) {
         outStr += inputStr;
     }
