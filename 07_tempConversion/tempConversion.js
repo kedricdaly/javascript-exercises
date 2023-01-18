@@ -2,14 +2,18 @@ const convertToCelsius = function(tempF) {
   const RATIO = 5/9;
   const OFFSET = -32;
   
-  return (tempF + OFFSET) * RATIO;
+  let outTemp = (tempF + OFFSET) * RATIO;
+
+  return Math.round(outTemp * 10) / 10
 };
 
 const convertToFahrenheit = function(tempC) {
   const RATIO = 9/5;
-  OFFSET = 32;
+  const OFFSET = 32;
 
-  return (tempC * RATIO) + OFFSET;
+  let outTemp = (tempC * RATIO) + OFFSET;
+
+  return Math.round(outTemp * 10) / 10
 
 };
 
