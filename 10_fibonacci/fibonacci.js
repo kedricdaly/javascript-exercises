@@ -2,15 +2,15 @@ const fibonacci = function(n) {
     if (n < 0) return "OOPS";
     n = parseInt(n); // allows for strings
 
-    // recursive with no memoization implementation
-    if (n == 1) {return 1} else if (n == 2) {return 1};
+    let fibCache = {}
 
-    //console.log(fibonacci(n-1) + fibonacci(n - 2))
-    return fibonacci(n - 1) + fibonacci(n - 2);
-
+    const memofib = function(n) {
+        if (n in fibCache) return fibCache[n];
+        if (n <= 2) return 1;
+        return fibCache[n] = memofib(n - 1) + memofib(n - 2);
+    }
     
-
-
+    return memofib(n);
 };
 
 // Do not edit below this line
